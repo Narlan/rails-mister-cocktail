@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="nav-bar">
-    <div class="logo"></div>
+    <a href="/cocktails"><div class="btn btn-primary">Back to menu</div></a>
     <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
   </div>
 
@@ -9,16 +9,14 @@
     <h1>Cocktails</h1>
   </div>
 
-  <div class="main-grid">
-
+  <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <a href="/cocktails/<%=cocktail.id%>">
-        <div class="card">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?cocktail)">
           <%= cocktail.name %>
         </div>
       </a>
     <% end %>
-
   </div>
 
 </div>

@@ -1,23 +1,16 @@
 <div class="container">
 
-
   <div class="nav-bar">
-    <div class="logo"></div>
+    <a href="/cocktails"><div class="btn btn-primary">Back to menu</div></a>
     <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
   </div>
 
   <h1>New dose</h1>
 
-  <ul>
-    <% @ingredients.each do |ingredient| %>
-      <li><%= ingredient.name %></li>
-    <% end %>
-  </ul>
-
   <%= simple_form_for [@cocktail, @dose]  do |f| %>
     <%= f.association :ingredient, as: :radio_buttons %>
     <%= f.input :description %>
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
 
 </div>
