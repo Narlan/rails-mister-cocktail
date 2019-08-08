@@ -5,9 +5,9 @@
     <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
   </div>
 
-  <%= simple_form_for @cocktail @dose do |f| %>
+  <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
-
 
 </div>
