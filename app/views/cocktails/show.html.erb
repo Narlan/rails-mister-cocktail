@@ -1,0 +1,19 @@
+<div class="container">
+
+
+  <div class="nav-bar">
+    <div class="logo"></div>
+    <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
+  </div>
+
+  <h1><%= @cocktail.name %></h1>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li> <%= dose.ingredient.name %> <%= dose.description %> <%= link_to "remove", "/doses/#{dose.id}", method: :delete %> </li>
+    <% end %>
+  </ul>
+
+  <a href="/cocktails/<%= @cocktail.id %>/doses/new"><div class="btn btn-primary">New dose</div></a>
+
+
+</div>

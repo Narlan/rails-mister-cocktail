@@ -1,0 +1,13 @@
+<div class="container">
+
+  <div class="nav-bar">
+    <div class="logo"></div>
+    <a href="#"><div class="btn btn-primary">New cocktail</div></a>
+  </div>
+
+  <%= simple_form_for @cocktail @dose do |f| %>
+    <%= f.input :name %>
+  <% end %>
+
+
+</div>

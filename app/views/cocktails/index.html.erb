@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="nav-bar">
+    <div class="logo"></div>
+    <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
+  </div>
+
+  <div class="title">
+    <h1>Cocktails</h1>
+  </div>
+
+  <div class="main-grid">
+
+    <% @cocktails.each do |cocktail| %>
+      <a href="/cocktails/<%=cocktail.id%>">
+        <div class="card">
+          <%= cocktail.name %>
+        </div>
+      </a>
+    <% end %>
+
+  </div>
+
+</div>
