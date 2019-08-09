@@ -13,3 +13,7 @@ puts "done"
 Ingredient.create(name: "mint leaves")
 puts "done"
 
+url = "qr7kev0lvhnl1s9dvgoy"
+cocktail = Cocktail.new(name: 'Console')
+cocktail.picture = url
+cocktail.save
