@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
-  a = Ingredient.new(name: Faker::Food.ingredient)
-  puts "Ingredient : #{a.name}"
-  a.save!
-end
+
+Ingredient.create(name: "Salt")
+Ingredient.create(name: "Pepper")
+
+a = Cocktail.new(name: 'Green demon', photos: 'zqwwmipwa9ueuwgadeks')
+puts a
+a.save!
