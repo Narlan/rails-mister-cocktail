@@ -5,7 +5,8 @@
     <a href="/cocktails/new"><div class="btn btn-primary">New cocktail</div></a>
   </div>
 
-  <h1><%= @cocktail.name %></h1>
+  <%= cl_image_tag @cocktail.photos, height: 300, width: 500, crop: :fill %>
+  <h1><%= @cocktail.name %></h2>
   <ul>
     <% @cocktail.doses.each do |dose| %>
       <li> <%= dose.ingredient.name %>: <%= dose.description %> <%= link_to "remove", "/doses/#{dose.id}", method: :delete %> </li>

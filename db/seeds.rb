@@ -6,14 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ingredient.create(name: "lemon")
-puts "done"
-Ingredient.create(name: "ice")
-puts "done"
-Ingredient.create(name: "mint leaves")
-puts "done"
-
-url = "qr7kev0lvhnl1s9dvgoy"
-cocktail = Cocktail.new(name: 'Console')
-cocktail.picture = url
-cocktail.save
+10.times do
+  a = Ingredient.new(name: Faker::Food.ingredient)
+  puts "Ingredient : #{a.name}"
+  a.save!
+end
