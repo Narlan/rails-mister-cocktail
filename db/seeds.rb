@@ -9,6 +9,3 @@
 
 Ingredient.create(name: "Salt")
 Ingredient.create(name: "Pepper")
-
-puts a
-a.save!
