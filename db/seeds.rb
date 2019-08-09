@@ -10,6 +10,5 @@
 Ingredient.create(name: "Salt")
 Ingredient.create(name: "Pepper")
 
-a = Cocktail.new(name: 'Green demon', photos: 'zqwwmipwa9ueuwgadeks')
 puts a
 a.save!
